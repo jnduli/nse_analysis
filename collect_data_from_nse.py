@@ -34,11 +34,19 @@ def remove_nums_from_name(dataframe):
     dataframe['Company'] = dataframe['Company'].str.strip()
     return dataframe
 
+def add_datetime_to_dataframe(dataframe):
+    """
+    Adds date time column to a dataframe
+    """
+    dataframe['DateTime'] = pd.Timestamp.now()
+    return dataframe
+
 def save_current_stocks():
     """
     TODO: save stocks in csv file
     """
-    stock_frame = remove_nums_from_name(get_data_frame())
+    date_frame = add_datetime_to_dataframe(get_data_frame())
+    stock_frame = remove_nums_from_name(date_frame)
 
     if os.path.exists(FILENAME):
         append_write = 'a'
