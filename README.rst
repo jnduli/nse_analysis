@@ -18,6 +18,7 @@ script, you need to have some things installed:
 
 + Python3
 + Pandas: `Install instructions  <https://pandas.pydata.org/>`_
++ Mailutils: this allows one to receive prompts when errors occur
 
 After installine the same, you can do
 
