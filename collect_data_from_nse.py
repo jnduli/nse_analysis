@@ -8,6 +8,8 @@ import os
 import pandas as pd
 from bs4 import BeautifulSoup
 
+urllib3.disable_warnings()
+
 FILENAME = 'data/stocks.csv'
 
 def get_data_frame():
